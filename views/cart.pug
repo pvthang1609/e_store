@@ -1,0 +1,7 @@
+extends index.pug
+
+block content
+    ul
+        each item in cart.getItems()
+            li
+                span=item.id

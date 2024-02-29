@@ -1,0 +1,32 @@
+extends admin.pug
+
+block list
+    if treeView
+        div
+            div(class='flex justify-between') 
+                h3=menuItem
+                button(type="button", onclick=() => typeView = 'form')='Tao moi'
+            table(class='border-collapse border border-slate-300')
+                thead
+                    tr
+                        each col in treeView
+                            th(class='border border-slate-300 p-2')=col.label
+                        th(class='border border-slate-300 p-2')='Hanh dong'   
+                tbody
+                    each item in listItems 
+                        tr
+                            each col in treeView 
+                                if col.fieldName
+                                    td(class='border border-slate-300 p-2')=item[col.fieldName]
+                                else 
+                                    td(class='border border-slate-300 p-2')
+                                        !=col.funcGenData(item)
+                            td(class='border border-slate-300 p-2')
+                                button(type="button")='Sua'
+                                button(type="button", class='ml-2')='Xoa'
+    else
+        p='Chua duoc cau hinh view'
+
+
+block form
+    p='From View'

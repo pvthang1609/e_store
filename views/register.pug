@@ -1,0 +1,32 @@
+extends index.pug
+
+block content
+    form(action="/api/v1/auth/register", method="post", enctype="multipart/form-data") 
+        div
+            label(for="firstName")= 'Ho'
+            input(type="text", name="firstName", class='border ml-2 outline-none')
+        div(class='mt-2')
+            label(for="lastName")= 'Ten'
+            input(type="text", name="lastName", class='border ml-2 outline-none')
+        div(class='mt-2')
+            label(for="age")= 'Tuoi'
+            input(type="number", name="age", class='border ml-2 outline-none')
+        div(class='mt-2')
+            label(for="phoneNumber")= 'Dien thoai'
+            input(type="text", name="phone", class='border ml-2 outline-none')
+        div(class='mt-2')
+            label(for="email")= 'Email'
+            input(type="text", name="email", class='border ml-2 outline-none')
+        div(class='mt-2')
+            label(for="login")= 'Ten dang nhap'
+            input(type="text", name="login", class='border ml-2 outline-none')
+        div(class='mt-2')
+            label(for="password")= 'Mat khau'
+            input(type="password", name="password", class='border ml-2 outline-none')
+        div(class='mt-2')
+            label(for="avatar")= 'Anh dai dien'
+            input(type="file", name="avatar")
+        
+        input(type="submit", value="Dang ky")
+        span= ' Hoac '
+        a(href="/login")='Quay lai dang nhap' 

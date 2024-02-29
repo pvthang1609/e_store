@@ -1,0 +1,13 @@
+extends index.pug
+
+block content
+    form(action="/api/v1/auth/login", method="post") 
+        div
+            label(for="login")= 'Ten dang nhap'
+            input(type="text", name="login", class='border ml-2 outline-none')
+        div(class='mt-2')
+            label(for="password")= 'Mat khau'
+            input(type="password", name="password",class='border ml-2 outline-none')
+        input(type="submit", value="Dang nhap")
+        span= ' Hoac '
+        a(href="/register")='Dang ky' 

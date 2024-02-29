@@ -1,0 +1,23 @@
+extends index.pug
+
+
+block content
+    - var typeView = 'list'
+    h1='Admin page'
+    div(class='flex')
+        div
+            ul
+                li
+                    a(href="/admin/user")='User'
+                li
+                    a(href="/admin/product")='Product'
+                li
+                    a(href="/admin/sale_order")='Sale Order'
+                li
+                    a(href="/admin/attachment")='Attachment'
+                
+        div
+            if typeView === 'list'
+                block list
+            else 
+                block form

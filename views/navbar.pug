@@ -1,0 +1,24 @@
+nav
+    div='E_SHOP'
+    ul(class='flex')
+        li(class='mr-2')
+            a(href='/')='Trang chu'
+        li(class='mr-2')
+            a(href='/login')='Dang nhap'
+        li(class='mr-2')
+            a(href='/register')='Dang ky'
+        li(class='mr-2')
+            a(href='/sale_order')='Don mua hang'
+        li(class='mr-2')
+            a(href='/cart')
+                span='Gio hang '
+                span='('
+                span(id='cart_count')='0'
+                span=')'
+        li(class='mr-2')
+            a(href='/admin')='Trang quan ly'
+        li(class='mr-2')
+            a(href='/api/v1/auth/logout')='Dang xuat'
+
+        li
+            button(type="button", class='btn_check_cart')='Check'
